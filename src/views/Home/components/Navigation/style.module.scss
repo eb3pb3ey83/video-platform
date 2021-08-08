@@ -1,0 +1,29 @@
+.home-navigation {
+  background-color: $gray-white;
+}
+
+.home-navigation-content {
+  opacity: 0;
+}
+
+.home-navigation-content-enter {
+  opacity: 0;
+  margin-left: 0;
+}
+
+.home-navigation-content-enter-active {
+  opacity: 1;
+  margin-left: 24px;
+  transition: opacity 0.3s, margin 0.3s;
+}
+
+.home-navigation-content-exit {
+  opacity: 1;
+  margin-left: 24px;
+}
+
+.home-navigation-content-exit-active {
+  opacity: 0;
+  margin-left: 0;
+  transition: opacity 0.3s, margin 0.3s;
+}

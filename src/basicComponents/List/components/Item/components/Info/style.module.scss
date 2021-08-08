@@ -1,0 +1,9 @@
+.list-item-info {
+  width: 100%;
+
+  &__row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+}

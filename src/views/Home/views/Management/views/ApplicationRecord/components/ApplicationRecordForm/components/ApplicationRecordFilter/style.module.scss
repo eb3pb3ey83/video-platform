@@ -1,0 +1,18 @@
+
+.application-record-filter{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+
+
+  &__column{
+    display: flex;
+    flex-direction: column;
+    padding-top: 8px;
+  }
+}
+
+.application-record-filter-rangepicker{
+  width: 320px;
+  height: 34px;
+}

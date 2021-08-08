@@ -1,0 +1,41 @@
+$padding-vertical: 40px;
+$padding-horizontal: 40px;
+
+.modal {
+  z-index: 10;
+  padding: $padding-vertical $padding-horizontal;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  will-change: opacity;
+  @include full-fill(fixed);
+
+  @media only screen and (max-width: $mobile-width) {
+    padding: 10px;
+  }
+  &[data-size="full"] {
+    padding: 0;
+  }
+}
+
+.modal-enter {
+  transform: translateY(20px);
+  opacity: 0;
+}
+
+.modal-enter-active {
+  transform: translateY(0px);
+  opacity: 1;
+  transition: opacity 0.3s, transform 0.3s;
+}
+
+.modal-exit {
+  transform: translateY(0px);
+  opacity: 1;
+}
+
+.modal-exit-active {
+  transform: translateY(20px);
+  opacity: 0;
+  transition: opacity 0.3s, transform 0.3s;
+}

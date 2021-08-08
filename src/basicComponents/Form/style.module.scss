@@ -1,0 +1,9 @@
+.home-form {
+  display: inherit;
+  flex: inherit;
+  flex-direction: inherit;
+  @include size(inherit);
+  max-width: 100%;
+  height: 100%;
+  background-color: $gray-bright;
+}

@@ -1,0 +1,64 @@
+.view_row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  transition: .3s;
+  padding: 12px 0 12px 10px;
+
+  &[data-is-over="true"] {
+    background: $color-primary-lighter;
+  }
+
+  &-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+
+  &-index {
+    width: 30px;
+  }
+
+  &-title {
+    color: $color-primary-darkest;
+  }
+
+  &-buttons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &-drag_wrapper {
+    width: 20px;
+    background: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &-drag_icon {
+    transition: .3s;
+    fill: $gray-dark;
+    cursor: grab;
+
+    &[data-can-drag="false"] {
+      fill: $gray-dark;
+      cursor: not-allowed;
+    }
+  }
+}
+
+.antd_switch {
+  margin-right: 26px !important; // 覆蓋過 Ant design 的樣式
+
+  &[data-is-closed="true"] {
+    background: #c6cbd4;
+  }
+
+  &[data-is-closed="false"] {
+    background: #2a69c7;
+  }
+}

@@ -1,0 +1,22 @@
+.view{
+    height: 100%;
+    &-panel{
+        padding: 16px;
+        height: 100%;
+        margin: 14px 0 24px 0;
+    }
+
+    &-bar{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    &-table{
+        &--sub{
+            margin:  16px 29px -1px 29px; 
+        }
+    }
+
+}
+

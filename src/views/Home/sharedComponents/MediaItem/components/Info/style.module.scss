@@ -1,0 +1,41 @@
+.media-info {
+
+  &-wrapper{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    padding: 0 1px;
+    position: relative;
+  }
+
+  &__title {
+    font-size: 15px;
+    color: $color-primary-darkest;
+    margin: 6px 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  &__department {
+    font-size: 12px;
+    font-weight: 500;
+    color: $gray-darkest;
+    line-height: 12px;
+    margin: 2px 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  &__description {
+    font-size: 12px;
+    color: $gray-darkest;
+    line-height: 12px;
+    margin: 2px 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}

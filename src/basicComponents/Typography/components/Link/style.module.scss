@@ -1,0 +1,34 @@
+$font-size: $font-size-sm;
+
+$line-height: 1;
+
+.typography-link {
+  cursor: pointer;
+  align-items: center;
+  line-height: $line-height;
+  font-size: $font-size;
+
+  &[data-with-underline="true"] {
+    text-decoration: underline;
+  }
+
+  &[data-with-underline="false"] {
+    text-decoration: none;
+  }
+
+  &[data-with-hovering-underline="true"] {
+    &:hover,
+    &:active,
+    &:focus {
+      text-decoration: underline;
+    }
+  }
+
+  &[data-with-hovering-underline="false"] {
+    &:hover,
+    &:active,
+    &:focus {
+      text-decoration: none;
+    }
+  }
+}

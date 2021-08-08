@@ -1,0 +1,46 @@
+$margin-right: 8px;
+
+$size: 16px;
+
+$border-style: solid;
+
+
+// checked
+$checked-true-border-color: $color-primary;
+$checked-true-border-width: 4px;
+
+$checked-false-border-color: $gray-dark;
+$checked-false-border-width: 1px;
+
+.radio-icon {
+  flex-shrink: 0;
+  position: relative;
+  margin-right: $margin-right;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  border-style: $border-style;
+  border-radius: 50%;
+  transition: all 400ms $transition-mode;
+  @include size($size);
+
+  &[data-is-checked="true"] {
+    &[data-is-disabled="false"]{
+      border-color: $color-primary;
+      border-width: 4px;
+      border-width: $checked-true-border-width
+    }
+
+    &[data-is-disabled="true"]{
+      border-color: $gray;
+      border-width: 4px;
+      border-width: $checked-true-border-width
+    }
+  }
+
+  &[data-is-checked="false"] {
+    border-color: $checked-false-border-color;
+    border-width: $checked-false-border-width
+  }
+
+}

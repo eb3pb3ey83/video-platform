@@ -1,0 +1,37 @@
+$padding: 4px;
+
+$min-width: 20px;
+
+$font-size: $font-size-xs;
+$font-weight: 400;
+
+$types: (
+  primary: (
+    color: $color-primary,
+    background-color: $color-primary
+  ),
+  warn: (
+    color: $color-warn,
+    background-color: $color-warn
+  )
+);
+
+.badge-count {
+  padding: $padding;
+  display: inline-block;
+  min-width: $min-width;
+  text-align: center;
+  white-space: nowrap;
+  line-height: 1;
+  font-size: $font-size;
+  font-weight: $font-weight;
+  background-color: inherit;
+  border-radius: calc(1em + #{$padding} * 2) / 100%; // 1em + padding-top + padding-bottom / 100%
+
+  @each $type, $styles in $types {
+    &[data-type="#{$type}"] {
+      color: map-get($styles, background-color);
+      background-color: rgba(map-get($styles, background-color), 0.2);
+    }
+  }
+}

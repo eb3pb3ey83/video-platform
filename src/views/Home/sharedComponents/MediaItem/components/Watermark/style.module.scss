@@ -1,0 +1,14 @@
+.media-watermark {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #000000;
+  opacity: 0.3;
+  color: white;
+  overflow: hidden;
+}

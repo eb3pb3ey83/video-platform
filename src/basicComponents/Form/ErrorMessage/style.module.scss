@@ -1,0 +1,44 @@
+
+
+.error-message{
+  position: relative;
+  &__border{
+    position: absolute;
+    left: 0;
+    width: 100%;
+    pointer-events: none;
+
+    &[data-is-show-border="true"] {
+      border: 1px solid  $color-danger;
+      border-radius: 3px;
+    }
+
+    &[data-size='sm'] {
+      height: 34px;
+      top: -34px;
+    }
+
+    &[data-size='md'] {
+      height: 40px;
+      top: -40px;
+    }
+
+    &[data-size='lg'] {
+      height: 58px;
+      top: -58px;
+    }
+
+    &[data-size='xl'] {
+      height: 64px;
+      top: -64px;
+    }
+  }
+
+  &__text{
+    padding-top: 3px;
+    color: $color-danger;
+    font-size: 12px;
+  }
+}
+
+

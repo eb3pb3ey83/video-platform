@@ -1,0 +1,37 @@
+.home-over-page {
+  z-index: 10;
+  background-color: $gray-white;
+  will-change: opacity, top;
+  @include full-fill(fixed);
+
+  &__button-close {
+    z-index: 10;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    color: $gray-white;
+    display: flex;
+  }
+}
+
+.home-over-page-enter {
+  transform: translateY(40px);
+  opacity: 0;
+}
+
+.home-over-page-enter-active {
+  transform: translateY(0px);
+  opacity: 1;
+  transition: opacity 0.3s, transform 0.3s;
+}
+
+.home-over-page-exit {
+  transform: translateY(0px);
+  opacity: 1;
+}
+
+.home-over-page-exit-active {
+  transform: translateY(40px);
+  opacity: 0;
+  transition: opacity 0.3s, transform 0.3s .3s;
+}

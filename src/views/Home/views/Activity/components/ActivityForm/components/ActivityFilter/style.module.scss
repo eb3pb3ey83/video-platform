@@ -1,0 +1,35 @@
+
+.activity-filter{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+
+
+  &__column{
+    display: flex;
+    flex-direction: column;
+    padding-top: 8px;
+  }
+
+  &-input{
+    width: 320px;
+    height: 34px;
+  }
+}
+
+.activity-filter-select{
+  width: 320px;
+  height: 34px;
+}
+
+.activity-filter-multiselect{
+  width: 280px;
+  min-height: 34px;
+  height: auto;
+}
+
+.activity-filter-rangepicker{
+  width: 320px;
+  height: 34px;
+}
+

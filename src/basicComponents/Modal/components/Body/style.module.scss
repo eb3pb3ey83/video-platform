@@ -1,0 +1,19 @@
+.modal-body {
+  flex-grow: 1;
+  display: flex;
+  align-content: flex-start;
+  flex-wrap: wrap;
+  overflow-y: auto;
+
+  &[data-is-half="true"] {
+    width: 50%;
+  }
+
+  &[data-is-half="false"] {
+    width: 100%;
+  }
+
+  @media only screen and (max-width: $mobile-width) {
+    padding: 24px 20px !important;
+  }
+}

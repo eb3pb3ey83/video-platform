@@ -1,0 +1,10 @@
+
+.record-button-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+
+    .record-button{
+        width: 120px;
+    }
+}

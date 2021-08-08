@@ -1,0 +1,30 @@
+// ---
+// types
+$types: (
+  default: transparent,
+  primary: $color-primary
+);
+
+
+// ---
+// shapes
+$shapes: (
+  rect: 0,
+  radius: 3px
+);
+
+.menu {
+  outline: none;
+
+  @each $type, $background-color in $types {
+    &[data-type="#{$type}"] {
+      background-color: $background-color;
+    }
+  }
+
+  @each $shape, $radius in $shapes {
+    &[data-shape="#{$shape}"] {
+      border-radius: $radius;
+    }
+  }
+}

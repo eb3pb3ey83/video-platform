@@ -1,0 +1,12 @@
+
+.acitvity-button-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    margin-bottom: -8px;
+
+    .acitvity-button{
+        width: 134px;
+        margin: 8px;
+    }
+}

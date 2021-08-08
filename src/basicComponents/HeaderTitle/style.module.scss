@@ -1,0 +1,13 @@
+$color: $gray-white;
+
+$font-size: $font-size-xl;
+$font-weight: 300;
+
+.home-header-title {
+  flex: auto;
+  padding: 21px 24px;
+  line-height: 1;
+  color: $color;
+  font-size: $font-size;
+  font-weight: $font-weight;
+}

@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="110" height="110" viewBox="0 0 110 110">
+    <g fill="none" fill-rule="evenodd">
+        <circle cx="55" cy="55" r="55" fill="#F3F5F6"/>
+        <path d="M25 25h60v60H25z"/>
+        <g transform="translate(27 27)">
+            <path fill="#FFF" fill-rule="nonzero" d="M54 18v31.723C54 52.075 52.102 54 49.781 54H4.22C1.899 54 0 52.075 0 49.723V18h54z"/>
+            <path fill="#DFE1E6" d="M10.8 45v3.6H7.2V45h3.6zm9 0v3.6h-3.6V45h3.6zm9 0v3.6h-3.6V45h3.6zm-18-9v3.6H7.2V36h3.6zm9 0v3.6h-3.6V36h3.6zm9 0v3.6h-3.6V36h3.6zm-9-9v3.6h-3.6V27h3.6zm-9 0v3.6H7.2V27h3.6zm36 0v3.6h-3.6V27h3.6zm-18 0v3.6h-3.6V27h3.6zm9 0v3.6h-3.6V27h3.6z"/>
+            <path fill="#AAB2BC" d="M50.063 5.402H2.536C.503 5.402 0 7.145 0 8.849V18h54V9.181c0-1.891-.607-3.647-2.716-3.78h-1.221z"/>
+            <rect width="3.6" height="10.8" x="9" fill="#FFF" rx="1.8"/>
+            <rect width="3.6" height="10.8" x="41.4" fill="#FFF" rx="1.8"/>
+        </g>
+        <g transform="translate(61 61)">
+            <circle cx="12" cy="12" r="11.5" fill="#DFE1E6" stroke="#F3F5F6"/>
+            <path stroke="#FFF" stroke-width="3.429" d="M6 11.143l4.286 4.286L17.57 8.57"/>
+        </g>
+    </g>
+</svg>

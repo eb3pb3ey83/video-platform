@@ -1,0 +1,14 @@
+
+.view-button-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+
+    .view-button{
+        width: 152px;
+
+        button{
+            padding: 0 10px;
+        }
+    }
+}

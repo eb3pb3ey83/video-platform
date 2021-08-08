@@ -1,0 +1,51 @@
+$border-width: 1px;
+$border-style: solid;
+$border-color: $gray-light;
+$border-radius: 3px;
+
+$shadow-x: 0;
+$shadow-y: 6px;
+$shadow-blur: 16px;
+$shadow-spread: 0;
+$shadow-color: $gray-light;
+
+$background-color: $gray-white;
+
+.popover {
+  border: $border-width $border-style $border-color;
+  border-radius: $border-radius;
+  box-shadow: $shadow-x $shadow-y $shadow-blur $shadow-spread $shadow-color;
+  background-color: $background-color;
+
+  &__tip {
+    fill: $background-color;
+
+    &--top {
+      filter: drop-shadow(0 1px 0 $border-color);
+      @include position-center-over-bottom;
+
+    }
+
+    &--right {
+      filter: drop-shadow(-1px 0 0 $border-color);
+      @include position-center-over-left;
+
+    }
+
+    &--bottom {
+      filter: drop-shadow(0 -1px 0 $border-color);
+      @include position-center-over-top;
+
+    }
+
+    &--left {
+      filter: drop-shadow(1px 0 0 $border-color);
+      @include position-center-over-right;
+
+    }
+  }
+
+  &__target {
+    z-index: 1;
+  }
+}

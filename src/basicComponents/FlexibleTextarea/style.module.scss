@@ -1,0 +1,11 @@
+
+.textarea{
+  line-height: 1.43;
+  border-radius: 3px;
+  border: solid 1px hsl(0,0%,80%);
+  color: $color-primary-darkest;
+  font-size: 14px;
+  padding: 8px;
+  resize: none;
+  overflow: hidden;
+}

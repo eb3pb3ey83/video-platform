@@ -1,0 +1,28 @@
+$background-color: $gray-white;
+
+.layout-sider {
+  flex-shrink: 0;
+  z-index: 10;
+  position: relative;
+  min-width: 0; /* fix firefox can't set width smaller than content on flex item */
+  background-color: $background-color;
+  width: 70px;
+}
+
+.layout-sider-content-enter {
+  width: 70px;
+}
+
+.layout-sider-content-enter-active {
+  width: 228px;
+  transition: width 0.3s;
+}
+
+.layout-sider-content-exit {
+  width: 228px;
+}
+
+.layout-sider-content-exit-active {
+  width: 70px;
+  transition: width 0.3s;
+}

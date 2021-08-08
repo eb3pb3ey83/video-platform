@@ -1,0 +1,83 @@
+.upload-popover {
+  position: fixed;
+  right: 60px;
+  bottom: 25px;
+  box-shadow: 0 2px 5px 0 rgba(19, 38, 60, 0.3);
+  width: 400px;
+  z-index: 11;
+  border-radius: 3px;
+
+  &__list {
+    max-height: 384px;
+    margin-bottom: 0;
+    transition: .2s;
+    overflow: hidden;
+  }
+
+  &__header {
+    display: grid;
+    grid-template-columns: auto 20px;
+    grid-template-rows: auto auto;
+    grid-template-areas:
+      "title dropdown-button"
+      "remaining-time  dropdown-button";
+    background: $color-primary-darker ;
+    color: #fff;
+    padding: 14px 30px;
+    justify-content: center;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    font-size: $font-size-md;
+    justify-content: space-between;
+
+    &[data-is-uploading="true"] {
+      grid-row-gap: 3px;
+    }
+  }
+
+  &__button {
+    display: flex;
+    align-items: center;
+    grid-area: dropdown-button;
+  }
+
+  &__icon {
+    transition: .3s;
+
+    &[data-is-popover-expend="false"] {
+      transform: rotate(180deg);
+    }
+  }
+
+  &__title {
+    grid-area: title;
+  }
+
+  &__remaining-time {
+    grid-area: remaining-time;
+    font-size: $font-size-xs;
+    color: $color-primary-lighter;
+
+    &[data-is-uploading="true"] {
+      padding-top: 5px;
+    }
+  }
+}
+
+.upload-popover-enter {
+  opacity: 0;
+}
+
+.upload-popover-enter-active {
+  opacity: 1;
+  transition: opacity 300ms;
+}
+
+.upload-popover-exit {
+  opacity: 1;
+}
+
+.upload-popover-exit-active {
+  opacity: 0;
+  transition: opacity 300ms;
+}

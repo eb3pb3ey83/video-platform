@@ -1,0 +1,15 @@
+.activity-info {
+  display: grid;
+  grid-template-columns: calc(45% - 40px) calc(45% - 40px) 10%;
+  grid-gap: 40px;
+  padding: 30px 60px 40px 60px;
+  box-shadow: 0 2px 3px 0 rgba(231, 233, 241, 0.7);
+  min-width: 1366px;
+  background-color: #ffffff;
+
+  &[data-is-edit-mode="true"] {
+    grid-template-columns: 41% 41% 10%;
+    padding: 30px 60px 40px 0;
+    justify-content: space-between;
+  }
+}

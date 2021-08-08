@@ -1,0 +1,10 @@
+
+.upload-button-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+
+    .upload-button{
+        width: 140px;
+    }
+}

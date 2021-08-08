@@ -1,0 +1,43 @@
+@keyframes rotate {
+  0% {
+    transform: rotate(0);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+$size-xs: 22px;
+$size-sm: 35px;
+$border-size-xs: 3px;
+$border-size-sm: 5px;
+$border-color: $color-primary;
+$border-color-circle: $color-primary-lighter;
+$duration: 1000ms;
+
+$sizes: (
+  xs: (
+    size: $size-xs,
+    border-size: $border-size-xs,
+  ),
+  sm: (
+    size: $size-sm,
+    border-size: $border-size-sm,
+  ),
+);
+.spinner {
+  position: relative;
+  top: 50%;
+  border-radius: 50%;
+  animation: rotate $duration linear infinite;
+
+  @each $size, $styles in $sizes {
+    &[data-size='#{$size}'] {
+      @include size(map-get($styles, size));
+      margin: -(map-get($styles, size)) / 2 auto 0;
+      border: map-get($styles, border-size) solid $border-color-circle;
+      border-top-color: $border-color;
+    }
+  }
+}

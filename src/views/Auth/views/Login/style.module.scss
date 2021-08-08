@@ -1,0 +1,23 @@
+.login {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-width: 300px;
+
+  &__title {
+    margin-top: 15px;
+    font-size: 28px;
+    letter-spacing: 1px;
+    font-weight: normal;
+  }
+
+  &__form {
+    width: 100%;
+    margin-top: 50px;
+  }
+
+  &__icon {
+    background: red;
+  }
+}

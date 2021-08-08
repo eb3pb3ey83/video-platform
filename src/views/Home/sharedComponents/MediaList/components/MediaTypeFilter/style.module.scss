@@ -1,0 +1,26 @@
+.media-type{
+  display: flex;
+  flex-direction: row;
+  z-index: 1;
+
+  &[data-is-activity='true'] {
+    margin-bottom: 12px;
+  }
+}
+
+.media-amount{
+  display: flex;
+  flex-direction: row;
+  color: $color-primary-darkest;
+  margin: 6px 0 0 28px;
+
+  &__text{
+    margin: 0;
+  }
+
+  &__number{
+    margin: 0;
+    color: $color-warn;
+    margin: 0 8px 0 12px;
+  }
+}

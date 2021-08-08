@@ -1,0 +1,13 @@
+.rangepicker{
+    span{
+        height: inherit;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        color: $color-primary-darkest;
+
+        input{
+            width: 28%;
+        }
+        }
+}

@@ -1,0 +1,25 @@
+.media-display{
+  width: 100%;
+  min-width: 1366px;
+  height: 453px;
+  background-color: $gray-bright;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+  &__item{
+    width: 748px;
+    height: 421px;
+    margin: 0 24px;
+  }
+
+  &__icon{
+    cursor: pointer;
+
+    &[data-is-disabled="true"] > path {
+      stroke: $gray-dark;
+    }
+  }
+}

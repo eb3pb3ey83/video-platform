@@ -1,0 +1,31 @@
+.radio-group{
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+
+      flex-wrap: wrap;
+      width: auto;
+      height: 32px;
+
+      &-label{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        padding-bottom: 8px;
+
+        &__text{
+
+        }
+      }
+
+      &-list{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: auto;
+        height: auto;
+      }
+      
+}
+

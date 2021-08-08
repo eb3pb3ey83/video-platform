@@ -1,0 +1,40 @@
+@font-face {
+  font-family: "BebasNeue";
+  font-style: normal;
+  font-weight: 100;
+  src: url("./../assets/fonts/BebasNeue/BebasNeue-Thin.woff") format("woff");
+}
+
+@font-face {
+  font-family: "BebasNeue";
+  font-style: normal;
+  font-weight: 300;
+  src: url("./../assets/fonts/BebasNeue/BebasNeue-Light.woff") format("woff");
+}
+
+@font-face {
+  font-family: "BebasNeue";
+  font-style: normal;
+  font-weight: 400;
+  src: url("./../assets/fonts/BebasNeue/BebasNeue-Book.woff") format("woff");
+}
+
+@font-face {
+  font-family: "BebasNeue";
+  font-style: normal;
+  font-weight: 500;
+  src: url("./../assets/fonts/BebasNeue/BebasNeue-Regular.woff") format("woff");
+}
+
+@font-face {
+  font-family: "BebasNeue";
+  font-style: normal;
+  font-weight: 700;
+  src: url("./../assets/fonts/BebasNeue/BebasNeue-Bold.woff") format("woff");
+}
+
+// 在 .scss 檔案裡面定義 @font-face，但沒有使用的話，webpack 實際上不會 inject font-face 到 <style> 裡面
+// 所以在這裡寫 import 的 class name，但 **不使用**，確保在其他 .scss 檔案裡不 import 也能使用該字型
+.import-bebase-neue {
+  font-family: "BebasNeue";
+}

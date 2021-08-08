@@ -1,0 +1,21 @@
+.radio{
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: center;
+      height: 32px;
+      width: auto;
+      margin-right: 8px;
+
+      &-input{
+        display: none;
+      }
+
+      &-title{
+        font-size: 14px;
+        color:   #2c313a;
+        line-height: 16px;
+      }
+}
+
+

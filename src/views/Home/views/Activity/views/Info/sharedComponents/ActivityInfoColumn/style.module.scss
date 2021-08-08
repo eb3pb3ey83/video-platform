@@ -1,0 +1,8 @@
+.activity-info {
+  &__column:last-child {
+    display: flex;
+    justify-content: flex-end;
+    align-content: flex-end;
+    flex-wrap: wrap;
+  }
+}

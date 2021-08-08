@@ -1,0 +1,40 @@
+
+.premission-creator-add-button {
+  position: absolute;
+  top: -42px;
+  right: 0;
+}
+
+.premission-creator-input {
+  height: 40px;
+}
+
+.premission-creator-line {
+  margin: 12px 0 0 0;
+}
+
+.premission-creator-activity-field-wrapper {
+  position: relative;
+  padding-top: 10px;
+}
+
+.premission-creator-activity-field {
+  display: grid;
+  grid-template-columns: auto 134px 312px auto;
+  justify-content: space-around;
+  padding-right: 10px;
+
+  &:not(:last-of-type) {
+    margin-bottom: 10px;
+  }
+}
+
+.premission-creator-icon-wrapper {
+  display: flex;
+  align-items: center;
+  height: 40px;
+
+  &__delete-icon {
+    fill: #818891;
+  }
+}

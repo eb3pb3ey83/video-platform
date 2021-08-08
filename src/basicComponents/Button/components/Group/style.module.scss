@@ -1,0 +1,242 @@
+$margin-horizontal: 10px;
+
+$border-width: 1px;
+
+// ---
+// radiuses
+$radiuses: (
+  xs: 3px,
+  sm: 3px,
+  md: 5px,
+  lg: 5px
+);
+
+// sizes
+$sizes: (
+  xs: (
+    height: 22px
+  ),
+  sm: (
+    height: 34px
+  ),
+  md: (
+    height: 44px
+  ),
+  lg: (
+    height: 44px
+  )
+);
+
+// shapes
+$shapes: (
+  rect: (
+    xs: 0px,
+    sm: 0px,
+    md: 0px,
+    lg: 0px
+  ),
+  radius: (
+    xs: 3px,
+    sm: 3px,
+    md: 5px,
+    lg: 5px
+  ),
+  rounded: (
+    xs: 100%,
+    sm: 100%,
+    md: 100%,
+    lg: 100%
+  ),
+  circle: (
+    xs: 50%,
+    sm: 50%,
+    md: 50%,
+    lg: 50%
+  )
+);
+
+// ---
+// directions
+$directions: (vertical, horizontal);
+
+// ---
+// types
+$types: (
+  default: (
+    border-color: $gray-light,
+    border-color-activate: $color-primary
+  ),
+  primary: (
+    border-color: rgba($gray-white, 0.25),
+    border-color-activate: rgba($gray-white, 0.5)
+  ),
+  danger: (
+    border-color: rgba($gray-white, 0.25),
+    border-color-activate: rgba($gray-white, 0.5)
+  )
+);
+
+.button-group {
+  &[data-is-block="true"] {
+    display: flex;
+    width: 100%;
+  }
+
+  &[data-is-block="false"] {
+    display: inline-flex;
+    vertical-align: middle;
+  }
+
+  &[data-direction="vertical"] {
+    flex-direction: column;
+
+    & > :not(:disabled)[role="button"][data-is-filled="true"] {
+      @each $type, $styles in $types {
+        &[data-type="#{$type}"] {
+          &:first-of-type {
+            border-bottom-color: map-get($styles, border-color);
+          }
+
+          &:not(:first-of-type):not(:last-of-type) {
+            border-bottom-color: map-get($styles, border-color);
+            border-top-color: map-get($styles, border-color);
+          }
+
+          &:last-of-type {
+            border-top-color: map-get($styles, border-color);
+          }
+
+          &:hover,
+          &:focus {
+            &:first-of-type {
+              border-bottom-color: map-get($styles, border-color-activate);
+            }
+
+            &:not(:first-of-type):not(:last-of-type) {
+              border-bottom-color: map-get($styles, border-color-activate);
+              border-top-color: map-get($styles, border-color-activate);
+            }
+
+            &:last-of-type {
+              border-top-color: map-get($styles, border-color-activate);
+            }
+          }
+        }
+      }
+
+      @each $shape, $shape-sizes in $shapes {
+        &[data-shape="#{$shape}"] {
+          @each $shape-size, $border-radius in $shape-sizes {
+            &[data-size="#{$shape-size}"] {
+              border-radius: 0;
+
+              @if ($shape == "rounded") {
+                &:first-of-type {
+                  border-top-left-radius: #{map-get(map-get($sizes, $shape-size), height)} $border-radius;
+                  border-top-right-radius: #{map-get(map-get($sizes, $shape-size), height)} $border-radius;
+                }
+                &:last-of-type {
+                  border-bottom-left-radius: #{map-get(map-get($sizes, $shape-size), height)} $border-radius;
+                  border-bottom-right-radius: #{map-get(map-get($sizes, $shape-size), height)} $border-radius;
+                }
+              } @else {
+                &:first-of-type {
+                  border-top-left-radius: $border-radius;
+                  border-top-right-radius: $border-radius;
+                }
+                &:last-of-type {
+                  border-bottom-left-radius: $border-radius;
+                  border-bottom-right-radius: $border-radius;
+                }
+              }
+
+              &:not(:first-of-type) {
+                margin-top: -$border-width;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &[data-direction="horizontal"] {
+    flex-direction: row;
+
+    & > :not(:disabled)[role="button"][data-is-filled="true"] {
+      @each $type, $styles in $types {
+        &[data-type="#{$type}"] {
+          &:first-of-type {
+            border-right-color: map-get($styles, border-color);
+          }
+
+          &:not(:first-of-type):not(:last-of-type) {
+            border-right-color: map-get($styles, border-color);
+            border-left-color: map-get($styles, border-color);
+          }
+
+          &:last-of-type {
+            border-left-color: map-get($styles, border-color);
+          }
+
+          &:hover,
+          &:focus {
+            &:first-of-type {
+              border-right-color: map-get($styles, border-color-activate);
+            }
+
+            &:not(:first-of-type):not(:last-of-type) {
+              border-right-color: map-get($styles, border-color-activate);
+              border-left-color: map-get($styles, border-color-activate);
+            }
+
+            &:last-of-type {
+              border-left-color: map-get($styles, border-color-activate);
+            }
+          }
+        }
+      }
+
+      @each $shape, $shape-sizes in $shapes {
+        &[data-shape="#{$shape}"] {
+          @each $shape-size, $border-radius in $shape-sizes {
+            &[data-size="#{$shape-size}"] {
+              border-radius: 0;
+
+              @if ($shape == "rounded") {
+                &:first-of-type {
+                  border-top-left-radius: #{map-get(map-get($sizes, $shape-size), height)} $border-radius;
+                  border-bottom-left-radius: #{map-get(map-get($sizes, $shape-size), height)} $border-radius;
+                }
+                &:last-of-type {
+                  border-top-right-radius: #{map-get(map-get($sizes, $shape-size), height)} $border-radius;
+                  border-bottom-right-radius: #{map-get(map-get($sizes, $shape-size), height)} $border-radius;
+                }
+              } @else {
+                &:first-of-type {
+                  border-top-left-radius: $border-radius;
+                  border-bottom-left-radius: $border-radius;
+                }
+                &:last-of-type {
+                  border-top-right-radius: $border-radius;
+                  border-bottom-right-radius: $border-radius;
+                }
+              }
+
+              &:not(:first-of-type) {
+                margin-left: -$border-width;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  & > :not(:disabled)[role="button"][data-is-filled="true"] {
+    &:hover,
+    &:focus {
+      z-index: 1;
+    }
+  }
+}

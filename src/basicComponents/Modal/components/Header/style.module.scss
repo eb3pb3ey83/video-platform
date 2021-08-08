@@ -1,0 +1,47 @@
+$padding-vertical: 16px;
+$padding-horizontal: 24px;
+
+$icon-size: 20px;
+$icon-margin-horizontal: 24px;
+
+$font-size: $font-size-lg;
+$font-weight: 500;
+
+$border-width: 1px;
+$border-style: solid;
+$border-color: $gray-light;
+
+// types
+$types: (
+  // default:(
+  //   color: ,
+  //   border-color: ,
+  //   background-color:
+  // ),
+  danger: (
+    color: $gray-white,
+    border-color: $color-danger,
+    background-color: $color-danger
+  )
+);
+
+.modal-header {
+  flex-shrink: 0;
+  position: relative;
+  padding: $padding-vertical ($icon-size + $icon-margin-horizontal + 8px) $padding-vertical $padding-horizontal;
+  display: flex;
+  align-items: center;
+  font-size: $font-size;
+  font-weight: $font-weight;
+  border-bottom: $border-width $border-style $border-color;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+
+  @each $type, $styles in $types {
+    &[data-type='#{$type}'] {
+      color: map-get($styles, color);
+      border-color: map-get($styles, border-color);
+      background-color: map-get($styles, background-color);
+    }
+  }
+}

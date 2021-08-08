@@ -1,0 +1,36 @@
+.edit_row {
+  &-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100% !important; // 覆蓋過 Ant design 的樣式
+  }
+
+  &-form {
+    display: flex;
+    background: #ffffff !important;
+    align-items: center;
+    width: 100% !important; // 覆蓋過 Ant design 的樣式
+    justify-content: space-between;
+    padding: 12px 0;
+    margin-left: 21px;
+  }
+
+  &-input {
+    display: block;
+    padding: 0 16px;
+    width: 100%;
+    min-width: 150px;
+    height: 40px;
+  }
+
+  &-buttons {
+    margin-left: 37px;
+    display: flex;
+    width: 479px;
+
+    &-submit_btn {
+      margin-right: 18px;
+    }
+  }
+}

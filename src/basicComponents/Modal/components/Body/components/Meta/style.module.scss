@@ -1,0 +1,11 @@
+$padding: 12px;
+
+$border-width: 1px;
+$border-style: solid;
+$border-color: $gray-light;
+
+.modal-body-meta {
+  padding: $padding;
+  width: 100%;
+  border-bottom: $border-width $border-style $border-color;
+}

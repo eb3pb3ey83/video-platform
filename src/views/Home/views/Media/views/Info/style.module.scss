@@ -1,0 +1,18 @@
+.media-info {
+    display: grid;
+    grid-template-columns: 45% 45% 10%;
+    grid-template-rows: 320px auto;
+    grid-template-areas:
+      "media-info description-info button"
+      "permission description-info blank";
+    padding: 30px 60px 40px 60px;
+    box-shadow: 0 -2px 3px 0 rgba(231, 233, 241, 0.7);
+    background-color: #ffffff;
+    min-width: 1366px;
+
+    &[data-is-edit-mode="true"] {
+      grid-template-columns: 41% 41% 10%;
+      padding: 30px 60px 40px 0;
+      justify-content: space-between;
+    }
+  }

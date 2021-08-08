@@ -1,0 +1,28 @@
+.media-info__column {
+  &[data-grid-area="media-info"] {
+    grid-area: media-info;
+    padding-right: 40px;
+  }
+
+  &[data-grid-area="permission"] {
+    grid-area: permission;
+    padding-right: 40px;
+  }
+
+  &[data-grid-area="description-info"] {
+    grid-area: description-info;
+    padding-right: 40px;
+
+    &[data-is-edit-mode="true"] {
+      padding-right: 60px;
+    }
+  }
+
+  &[data-grid-area="view-button"] {
+    grid-area: view-button;
+  }
+
+  &[data-grid-area="edit-button"] {
+    grid-area: edit-button;
+  }
+}

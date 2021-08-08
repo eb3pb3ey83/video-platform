@@ -1,0 +1,9 @@
+$margin-horizontal: 10px;
+
+.modal-action {
+  margin: 0 $margin-horizontal;
+
+  &:disabled {
+    opacity: 0.5;
+  }
+}

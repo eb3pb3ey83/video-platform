@@ -1,0 +1,22 @@
+.icon-title{
+  padding-bottom: 6px;
+  &:before{
+    display: inline-block;
+    content: '';
+    height: 100%;
+    width: 0 ;
+  }
+  svg{
+    display: inline-block;
+    width: auto;
+    height: auto;
+    vertical-align: middle;
+  }
+  &__name{
+    vertical-align: middle;
+    font-size: $font-size-lg;
+    color: $color-primary-darkest;
+    margin-left: 16px;
+    font-weight: 500;
+  }
+}

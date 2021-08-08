@@ -1,0 +1,66 @@
+.date-input-field {
+    position: relative;
+    display: flex;
+    background: #fff;
+    border: 1px solid #d9d9d9;
+    border-radius: 4px;
+    height: 34px;
+    min-width: 320px;
+}
+
+.input-field-wrapper{
+    width: 140px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    input {
+        border: none;
+        padding: 0;
+    }
+}
+
+.input-field-dash {
+    width: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.start-date-input,
+.end-date-input {
+    border: none;
+    height: 32px;
+    width: 100%;
+    padding: 0;
+    text-align: center;
+}
+
+.start-date-input {
+    padding-left: 10px;
+}
+
+.date-icon {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    width: 15px;
+}
+
+.error-message-box {
+    display: grid;
+    grid-template-columns: 162px 162px;
+    grid-template-areas: "start-date end-date"
+}
+
+.start-date-error-message-wrapper {
+    grid-area: start-date;
+    padding-left: 10px;
+}
+
+.end-date-error-message-wrapper {
+    grid-area: end-date;
+    padding-left: 5px;
+}

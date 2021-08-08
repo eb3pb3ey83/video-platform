@@ -1,0 +1,137 @@
+$form-enter-width: 528px;
+
+.activity-info-upload-wrapper {
+  box-shadow: 0 2px 3px 0 rgba(231, 233, 241, 0.7);
+  width: 100%;
+}
+
+.activity-info-upload-wrapper--top {
+  background: #fff;
+  box-shadow: 0 2px 3px 0 rgba(231, 233, 241, 0.7);
+  width: 100%;
+}
+
+.activity-info-upload-container {
+  width: 1246px;
+  margin: 0 auto;
+}
+
+.upload-form{
+  padding: 40px 0 30px 0;
+
+  &__description {
+    margin: 0;
+    margin-top: 4px;
+    font-size: 12px;
+    color: $color-primary-darker ;
+  }
+}
+
+.upload-form-user{
+  width: 100%;
+  margin-bottom: 40px;
+
+  &__info{
+    width: $form-enter-width
+  }
+}
+
+.upload-form__input{
+  padding: 9px;
+}
+
+.upload-form__textarea{
+  width: 100%;
+  min-height: 40px;
+  height: 64px;
+}
+
+.upload-form__radio{
+  height: 40px;
+  width: 180px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.upload-form-description{
+  width: 100%;
+  display: flex;
+
+  &__enter{
+    width: $form-enter-width;
+  }
+
+  &__other{
+    width: calc(100% - (#{$form-enter-width} * 2));
+    padding-left: 36px;
+    padding-top: 92px;
+  }
+
+  &-authority{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 23px;
+  }
+}
+
+.upload-function{
+  padding: 24px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &__choose-file{
+    display: flex;
+    align-items: center;
+  }
+
+  &__input-file{
+    display: none;
+  }
+
+  &__title{
+    font-size: $font-size-lg;
+    color: $color-primary-darkest;
+  }
+  &__text{
+    font-size: $font-size-sm;
+    padding: 0 24px;
+  }
+
+  &__upload{
+    color: white;
+    [role="upload-icon"]{
+      fill: white;
+    }
+  }
+
+  &__reminder{
+    display: inline-block;
+    padding-left: 10px;
+    width: 230px;
+    >p{
+      margin: 0;
+      width: 100%;
+      display: inline-block;
+      font-size: $font-size-xs;
+      color: $color-warn;
+    }
+  }
+}
+
+.upload-media-list{
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 20px 100px 20px;
+}
+.upload-media-item{
+  display: inline-block;
+  width: calc(100% / 5);
+  padding-bottom: 10px;
+  padding-right: 10px;
+
+  &:nth-child(5n){
+    padding-right: 0px;
+  }
+}

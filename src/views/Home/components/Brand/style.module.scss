@@ -1,0 +1,27 @@
+.home-brand {
+  background-color: $gray-white;
+  font-size: 0;
+  cursor: pointer;
+}
+
+.home-brand-content {
+  opacity: 0;
+}
+
+.home-brand-content-enter {
+  opacity: 0;
+}
+
+.home-brand-content-enter-active {
+  opacity: 1;
+  transition: opacity 0.3s;
+}
+
+.home-brand-content-exit {
+  opacity: 1;
+}
+
+.home-brand-content-exit-active {
+  opacity: 0;
+  transition: opacity 0.3s;
+}

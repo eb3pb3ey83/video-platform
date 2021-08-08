@@ -1,0 +1,44 @@
+$color: $color-primary-darkest;
+$color-active: $color-primary;
+
+$border-direction: "left";
+$border-width: 2px;
+$border-color: transparent;
+$border-color-active: currentColor;
+
+$background-color: transparent;
+$background-color-hover: $gray-lighter;
+$background-color-active: $gray-lightest;
+
+$icon-color: $gray-dark;
+$icon-color-active: $color-primary;
+
+.menu-link {
+  display: flex;
+  align-items: center;
+  height: inherit;
+  color: $color;
+  border-#{$border-direction}-width: $border-width;
+  border-#{$border-direction}-style: solid;
+  border-color: $border-color;
+  background-color: $background-color;
+  @include text-truncate-singleline;
+
+  &:hover {
+    background-color: $background-color-hover;
+  }
+
+  [role="menu-icon"] {
+    fill: $icon-color;
+  }
+
+  &--active {
+    color: $color-active;
+    border-color: $border-color-active;
+    background-color: $background-color-active;
+
+    [role="menu-icon"] {
+      fill: $icon-color-active;
+    }
+  }
+}

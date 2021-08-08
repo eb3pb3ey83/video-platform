@@ -1,0 +1,51 @@
+$border-radius: 8px;
+
+$border-width: 1px;
+$border-style: solid;
+$border-color: $gray-light;
+
+$background-color: $gray-white;
+
+$shadow-x: 0;
+$shadow-y: 2px;
+$shadow-blur: 3px;
+$shadow-spread: 0;
+$shadow-color: rgba($gray-light, 0.7);
+
+.panel {
+  position: relative;
+  flex: auto;
+  display: flex;
+  flex-direction: column;
+  border-radius: $border-radius;
+  border-width: $border-width;
+  border-style: $border-style;
+  border-color: $border-color;
+  background-color: $background-color;
+  box-shadow: $shadow-x $shadow-y $shadow-blur $shadow-spread $shadow-color;
+
+  & > & {
+    border-radius: 0;
+    border-width: 0;
+    background-color: transparent;
+    box-shadow: none;
+
+    &:first-of-type {
+      border-top-left-radius: $border-radius;
+      border-top-right-radius: $border-radius;
+    }
+
+    &:last-of-type {
+      border-bottom-left-radius: $border-radius;
+      border-bottom-right-radius: $border-radius;
+    }
+  }
+
+  &[data-has-sider="false"] > &:not(:first-of-type) {
+    border-top-width: $border-width;
+  }
+
+  &[data-has-sider="true"] {
+    flex-direction: row;
+  }
+}

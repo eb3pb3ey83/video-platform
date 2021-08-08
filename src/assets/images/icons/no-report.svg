@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="110" height="110" viewBox="0 0 110 110">
+    <defs>
+        <filter id="prefix__a" width="100.9%" height="101.9%" x="-.4%" y="-.6%" filterUnits="objectBoundingBox">
+            <feOffset dy="2" in="SourceAlpha" result="shadowOffsetOuter1"/>
+            <feGaussianBlur in="shadowOffsetOuter1" result="shadowBlurOuter1" stdDeviation="1.5"/>
+            <feColorMatrix in="shadowBlurOuter1" values="0 0 0 0 0.905882353 0 0 0 0 0.91372549 0 0 0 0 0.945098039 0 0 0 0.7 0"/>
+        </filter>
+        <rect id="prefix__b" width="1248" height="587" x="0" y="0" rx="6"/>
+    </defs>
+    <g fill="none" fill-rule="evenodd">
+        <path fill="#F8F9FB" d="M0 0H1366V768H0z" transform="translate(-662 -448)"/>
+        <path fill="#F8F9FB" d="M0 0H1366V768H0z" transform="translate(-662 -448)"/>
+        <g transform="translate(-662 -448) translate(94 154)">
+            <use fill="#000" filter="url(#prefix__a)" xlink:href="#prefix__b"/>
+            <use fill="#FFF" xlink:href="#prefix__b"/>
+        </g>
+        <g transform="translate(-662 -448) translate(662 448)">
+            <circle cx="55" cy="55" r="55" fill="#F3F5F6"/>
+            <g transform="translate(26 25)">
+                <path fill="#FFF" d="M1.482.991l38.053.049c.552 0 .998.447.999.999l.052 47.949c0 .552-.447 1-1 1h-.002l-38.053-.047c-.551-.001-.998-.448-.999-1L.481 1.994C.481 1.44.928.992 1.48.99h.002z"/>
+                <circle cx="31" cy="31" r="4" fill="#DFE1E6" fill-rule="nonzero"/>
+                <path fill="#AAB2BC" fill-rule="nonzero" d="M7 6H35V13H7z"/>
+                <path fill="#DFE1E6" fill-rule="nonzero" d="M7 39H35V47H7zM7.25 20.5L21.75 20.5 21.75 19 7.25 19zM7.25 30.5L21.75 30.5 21.75 29 7.25 29zM7 22.25H30V23.75H7zM7 32.25H24V33.75H7z"/>
+                <g transform="translate(17 10)">
+                    <path fill="#F3F5F6" d="M2.505.003l36.053.045c1.102.002 1.996.895 1.997 1.998l.05 45.95c0 1.104-.894 2-1.998 2.001h-.005l-36.053-.045C1.446 49.95.553 49.057.552 47.954l-.05-45.95C.501.9 1.395.005 2.5.004h.005z"/>
+                    <path fill="#FFF" d="M2.482.991l38.053.049c.552 0 .998.447.999.999l.052 47.949c0 .552-.447 1-1 1h-.002l-38.053-.047c-.551-.001-.998-.448-.999-1L1.481 1.994c0-.553.447-1.001.999-1.002h.002z"/>
+                    <circle cx="32" cy="31" r="4" fill="#DFE1E6" fill-rule="nonzero"/>
+                    <path fill="#AAB2BC" fill-rule="nonzero" d="M8 6H36V13H8z"/>
+                    <path fill="#DFE1E6" fill-rule="nonzero" d="M8 39H36V47H8zM8.25 20.5L22.75 20.5 22.75 19 8.25 19zM8.25 30.5L22.75 30.5 22.75 29 8.25 29zM8 22.25H31V23.75H8zM8 32.25H25V33.75H8z"/>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

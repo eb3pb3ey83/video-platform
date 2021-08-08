@@ -1,0 +1,33 @@
+
+.delete-info-modal-content {
+  &__title {
+    color: $color-primary-darkest;
+    font-weight: 500;
+    margin: 24px 0 16px 0;
+    width: 100%;
+
+    &:first-of-type {
+      margin: 0 0 16px 0;
+    }
+  }
+
+  &__notice {
+    color: $gray-darker;
+    font-size: $font-size-xs;
+    width: 100%;
+
+    &:last-of-type {
+      margin-bottom: 24px;
+    }
+  }
+
+  &__count {
+    color: $color-danger;
+    font-weight: 500;
+    margin-right: 8px;
+  }
+
+  &__type {
+    margin-right: 24px;
+  }
+}

@@ -1,0 +1,14 @@
+$padding-vertical: 32px;
+$padding-horizontal: 32px;
+
+$button-margin-left: 8px;
+
+.panel-footer {
+  flex-shrink: 0;
+  display: flex;
+  padding: $padding-vertical $padding-horizontal;
+
+  > [role="button"] + [role="button"] {
+    margin-left: $button-margin-left;
+  }
+}

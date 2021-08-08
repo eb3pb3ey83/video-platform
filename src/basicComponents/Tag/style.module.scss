@@ -1,0 +1,46 @@
+$padding-horizontal: 8px;
+
+$height: 20px;
+
+$font-size: $font-size-xs;
+$font-weight: 500;
+
+$border-radius: 3px;
+
+// ---
+// types
+$types: (
+  gray: (
+    color: $gray-dark,
+    background-color: $gray-lighter,
+  ),
+  primary: (
+    color: $color-primary,
+    background-color: $color-primary-lightest,
+  ),
+  warn: (
+    color: #ef843c,
+    background-color: #fdf2eb,
+  ),
+  secondary: (
+    color: #fff,
+    background-color: $color-primary,
+  ),
+);
+
+.tag {
+  padding: 0 $padding-horizontal;
+  display: inline-block;
+  height: $height;
+  line-height: $height;
+  font-size: $font-size;
+  font-weight: $font-weight;
+  border-radius: $border-radius;
+
+  @each $type, $styles in $types {
+    &[data-type='#{$type}'] {
+      color: map-get($styles, color);
+      background-color: map-get($styles, background-color);
+    }
+  }
+}

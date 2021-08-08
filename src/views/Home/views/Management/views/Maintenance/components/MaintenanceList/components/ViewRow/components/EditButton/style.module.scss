@@ -1,0 +1,12 @@
+
+.edit-button-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    margin-left: 122px;
+    margin-right: 46px;
+
+    .edit-button{
+        padding: 0 20px;
+    }
+}

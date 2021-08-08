@@ -1,0 +1,1 @@
+export default ({ functions }) => functions

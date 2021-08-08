@@ -1,0 +1,26 @@
+$background-color: rgba($color-primary-darkest, 0.5);
+
+.overlay {
+  background-color: $background-color;
+  overflow-y: auto;
+  z-index: 10;
+  @include full-fill;
+}
+
+.overlay-enter {
+  opacity: 0;
+}
+
+.overlay-enter-active {
+  opacity: 1;
+  transition: opacity 0.3s;
+}
+
+.overlay-exit {
+  opacity: 1;
+}
+
+.overlay-exit-active {
+  opacity: 0;
+  transition: opacity 0.3s;
+}

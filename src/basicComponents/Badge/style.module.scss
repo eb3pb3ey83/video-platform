@@ -1,0 +1,22 @@
+.badge {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  line-height: 1;
+  vertical-align: middle;
+
+  [role="badge-content"] {
+    top: 0;
+  }
+
+  &[data-mode="naked"] > [role="badge-content"] {
+    position: relative;
+  }
+
+  &[data-mode="dressed"] > [role="badge-content"] {
+    position: absolute;
+    left: 16px;
+    transform: translate(50%, -50%);
+    transform-origin: 100% 0%;
+  }
+}

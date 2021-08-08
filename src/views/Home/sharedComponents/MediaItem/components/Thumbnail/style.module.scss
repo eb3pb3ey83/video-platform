@@ -1,0 +1,114 @@
+.media-thumbnail {
+  &-wrapper{
+    width: 100%;
+    height: 129px;
+    border-radius: 3px;
+    position: relative;
+    background-color: black;
+    border-radius: 3px;
+    text-align: center;
+    overflow: hidden;
+
+    &[data-is-uploading="true"]:hover > div:first-of-type {
+      opacity: 1;
+      visibility: visible;
+      transition: opacity .3s;
+    }
+
+    .media-image{
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      object-position: center;
+      cursor: pointer;
+      transition: .5s;
+      image-orientation: none;
+
+      &[data-is-vertical="true"] {
+        width: 129px;
+        height: 129px;
+      }
+    }
+
+    .media-default{
+        width: 100%;
+        height: 100%;
+        background-color: $color-primary-lighter;
+    }
+
+    .media-video-wrapper{
+      width: 100%;
+      height: 100%;
+    }
+
+    .media-video{
+      width: 100%;
+      height: 100%;
+      background-color: black;
+      border-radius: 3px;
+      position: relative;
+      cursor: pointer;
+
+      &__tag {
+        z-index: 2;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 44px;
+        height: 22px;
+        background-color: $color-warn;
+        border-radius: 1px;
+        color: #ffffff;
+        font-size: 12px;
+
+        position: absolute;
+        left: 8px;
+        top: 8px;
+      }
+
+      video {
+        width: 100%;
+        height: 100%;
+      }
+
+      button {
+        position: absolute;
+        left: 0;
+        top: 0;
+      }
+    }
+  }
+
+  &-control {
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    z-index: 1;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity .3s, visibility .3s .3s;
+
+    &__button {
+      display: block;
+      width: 32px;
+      height: 32px;
+      background: rgba($color-primary-darkest, 0.7);
+      border-radius: 2.4px;
+
+      &:first-child {
+        margin-bottom: 5px;
+      }
+    }
+
+    &__icon {
+      fill: #fff;
+    }
+  }
+
+  &__status {
+    z-index: 2;
+    position: absolute;
+    left: 8px;
+    bottom: 8px;
+  }
+}

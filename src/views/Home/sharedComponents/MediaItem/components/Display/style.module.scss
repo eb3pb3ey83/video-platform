@@ -1,0 +1,117 @@
+.media-display {
+
+  &-wrapper{
+    border-radius: 3px;
+    position: relative;
+    background-color: black;
+    text-align: center;
+    overflow: hidden;
+
+    .media-image {
+      width: 100%;
+      height: 100%;
+      border-radius: 3px;
+      object-fit: contain;
+      object-position: center;
+      cursor: pointer;
+      transition: .5s;
+      image-orientation: none;
+
+      &[data-is-vertical="true"] {
+        width: 421px;
+        height: 421px;
+      }
+    }
+
+    .media-default{
+        width: 100%;
+        height: 100%;
+        background-color: $color-primary-lighter;
+    }
+
+    .media-video-wrapper{
+      width: 100%;
+      height: 100%;
+    }
+
+    .media-video{
+      width: 100%;
+      height: 100%;
+      background-color: black;
+      border-radius: 3px;
+      position: relative;
+      cursor: pointer;
+
+      &__tag {
+        z-index: 2;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 44px;
+        height: 22px;
+        background-color: $color-warn;
+        border-radius: 1px;
+        color: #ffffff;
+        font-size: 12px;
+
+        position: absolute;
+        left: 8px;
+        top: 8px;
+      }
+
+      video {
+        width: 100%;
+        height: 100%;
+      }
+
+      button {
+        z-index: 10;
+      }
+
+      div:first-child{  // video control bar
+        z-index: 10;
+
+        div {
+          z-index: 10;
+        }
+      }
+
+    }
+  }
+
+  &-private {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+
+
+    &__cover {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      background-color: $color-primary-darkest;
+      opacity: .6;
+      border-radius: 3px;
+    }
+
+    &__icon {
+      z-index: 10;
+      width: 64px;
+      height: 64px;
+    }
+
+    &__text {
+      z-index: 10;
+      font-size: 12px;
+      color: #ffffff;
+      margin-top: 2px;
+    }
+  }
+}
+

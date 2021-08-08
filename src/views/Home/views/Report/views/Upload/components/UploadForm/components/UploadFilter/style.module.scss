@@ -1,0 +1,23 @@
+
+.upload-filter{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+
+
+  &__column{
+    display: flex;
+    flex-direction: column;
+    padding-top: 8px;
+  }
+}
+
+.upload-filter-select{
+  width: 320px;
+  height: 34px;
+}
+
+.upload-filter-rangepicker{
+  width: 320px;
+  height: 34px;
+}

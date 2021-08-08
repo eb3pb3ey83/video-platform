@@ -1,0 +1,22 @@
+.trigger-enter {
+  visibility: hidden;
+  opacity: 0;
+}
+
+.trigger-enter-active {
+  z-index: 1;
+  visibility: visible;
+  opacity: 1;
+  transition: opacity 0.3s, transform 0.3s;
+}
+
+.trigger-exit {
+  z-index: 1;
+  visibility: visible;
+  opacity: 1;
+}
+
+.trigger-exit-active {
+  visibility: hidden;
+  opacity: 0;
+}
